@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cd ~/dotfiles
 git add .
 git commit -am "save"

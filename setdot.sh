@@ -7,7 +7,5 @@ ln -f .gitconfig ~/.gitconfig
 ln -f savedot.sh ~/savedot.sh
 
 cd ~
-#source .bashrc
-source .vimrc
-source .gitconfig
+source .bashrc
 

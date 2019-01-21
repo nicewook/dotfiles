@@ -1,6 +1,7 @@
 " vim-plug
-" You need to install vim-plug to ~/.vim/autoload)
+" You need to install vim-plug to ~/.vim/autoload
 " Execute :PlugInstall
+
 call plug#begin('~/.vim/autoload')
 
 
