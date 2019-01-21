@@ -1,0 +1,32 @@
+[user]
+	email = nicewook@hotmail.com
+	name = Jeong Hyunseok
+
+[alias]
+	al = config --get-regexp alias
+	co = checkout
+	cb = checkout -b
+	rb = rebase -i
+	st = status
+	cm = commit
+	pl = pull
+	ps = push
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(cyan)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
+	ad = add
+	tg = tag -n
+	df = diff
+	br = branch
+	ci = commit
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+
+[pull]
+	rebase = false
+  
+[fetch]
+	prune = false
+
+[rebase]
+	autoStash = false
+
