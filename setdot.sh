@@ -1,11 +1,13 @@
-#!/bin/sh
-ln -s .bashrc ../.bashrc
-ln -s .vimrc ../.vimrc
-ln -s .gitconfig ../.gitconfig
-ln -s savedot.sh ../savedot.sh
+#!/bin/bash
 
-cd ..
-source .bashrc
+cd ~/dotfiles
+ln -f .bashrc ~/.bashrc
+ln -f .vimrc ~/.vimrc
+ln -f .gitconfig ~/.gitconfig
+ln -f savedot.sh ~/savedot.sh
+
+cd ~
+#source .bashrc
 source .vimrc
 source .gitconfig
 
