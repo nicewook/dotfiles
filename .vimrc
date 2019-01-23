@@ -30,13 +30,22 @@ map <leader>nb :NERDTreeBookmark<cr>
 map <leader>nf :NERDTreeFind<cr>
 map <leader>t  :TagbarToggle<cr>
 
-
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" vim-go
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
 autocmd Filetype go nmap <leader>b <Plug>(go-build)
 autocmd Filetype go nmap <leader>r <Plug>(go-run)
+
+let g:go_fmt_command = "goimports"
+let g:go_list_type = "quickfix"
+
 
 
 let g:NERDTreeQuitOnOpen = 1
