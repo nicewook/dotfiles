@@ -30,11 +30,16 @@ map <leader>nb :NERDTreeBookmark<cr>
 map <leader>nf :NERDTreeFind<cr>
 map <leader>t  :TagbarToggle<cr>
 
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd Filetype go nmap <leader>b <Plug>(go-build)
+autocmd Filetype go nmap <leader>r <Plug>(go-run)
 
+
+let g:NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeIndicatorMapCustom = {
@@ -55,3 +60,5 @@ set number
 set tabstop=2
 set expandtab
 set shiftwidth=2
+
+set autowrite
