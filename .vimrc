@@ -42,6 +42,7 @@ nnoremap <leader>a :cclose<CR>
 
 autocmd Filetype go nmap <leader>b <Plug>(go-build)
 autocmd Filetype go nmap <leader>r <Plug>(go-run)
+autocmd Filetype go nmap <leader>l <Plug>(go-lint)
 
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
